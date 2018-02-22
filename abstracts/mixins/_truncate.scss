@@ -1,0 +1,10 @@
+//
+// Truncate
+// --------
+//
+
+@mixin truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: no-wrap;
+}

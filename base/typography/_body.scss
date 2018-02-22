@@ -1,0 +1,16 @@
+//
+// Body
+// ----
+//
+
+body {
+  color: $text-color;
+  font-family: $body-font;
+  font-size: map-get($font-sizes, 'base-small');
+  -webkit-font-smoothing: antialiased;
+  line-height: map-get($line-height, 'default');
+
+  @include respond-to('tablet-portrait') {
+    font-size: map-get($font-sizes, 'base-normal');
+  }
+}

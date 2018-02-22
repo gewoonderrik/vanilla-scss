@@ -1,0 +1,27 @@
+//
+// Colors
+// ------
+//
+
+$black: rgb(0, 0, 0);
+$grey-extra-dark: rgb(50, 50, 50);
+$grey-dark: rgb(100, 100, 100);
+$grey: rgb(150, 150, 150);
+$grey-light: rgb(200, 200, 200);
+$grey-extra-light: rgb(250, 250, 250);
+$white: rgb(255, 255, 255);
+
+$blue: rgb(26, 13, 171);
+
+$primary-color: $black;
+$secondary-color: $grey-extra-dark;
+
+$heading-color: $grey-extra-dark;
+$text-color: $grey-dark;
+$text-light-color: $grey;
+
+$link-color: $blue;
+
+$border-color: $grey-light;
+$th-background-color: $grey-extra-dark;
+$th-text-color: $white;

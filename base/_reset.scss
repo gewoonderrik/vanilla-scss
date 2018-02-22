@@ -1,0 +1,23 @@
+//
+// Reset
+// -----
+//
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: top;
+}

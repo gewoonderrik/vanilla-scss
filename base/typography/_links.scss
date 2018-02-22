@@ -1,0 +1,14 @@
+//
+// Links
+// -----
+//
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  transition: $default-transition;
+
+  &:hover {
+    color: shade($link-color, 25%);
+  }
+}

@@ -1,0 +1,101 @@
+//
+// Forms
+// -----
+// 1. include default placeholder styles
+// 2. remove default glow
+// 3. remove user-agent styles
+// 4. prevents text zoom iOS
+// 5. remove user-agent select arrow in Firefox
+// 6. remove user-agent select arrow in IE10
+//
+
+@include placeholder(); // [1]
+
+button,
+input,
+select,
+textarea, {
+  outline: 0; // [2]
+}
+
+[type='button'],
+[type='submit'],
+button {
+  @include button();
+}
+
+[type='button'],
+[type='email'],
+[type='password'],
+[type='search'],
+[type='submit'],
+[type='tel'],
+[type='text'],
+[type='url'],
+button,
+select,
+textarea {
+  -webkit-appearance: none; // [3]
+}
+
+[type='button'],
+[type='email'],
+[type='password'],
+[type='search'],
+[type='submit'],
+[type='tel'],
+[type='text'],
+[type='url'],
+select {
+  max-width: $form-element-width-small;
+}
+
+[type='email'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='url'],
+select,
+textarea {
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: 0;
+  display: block;
+  font-size: 16px; // [4]
+  padding: 10px 15px;
+  transition: border-color $default-speed $default-easing;
+  width: 100%;
+
+  @include respond-to('tablet-portrait') {
+    font-size: map-get($font-sizes, 'normal');
+  }
+
+  &:focus {
+    border: 1px solid shade($border-color, 25%);
+  }
+}
+
+select {
+  -moz-appearance: none; // [5]
+  background: url('data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==') no-repeat right 10px center;
+  text-indent: .01px; // [5]
+  text-overflow: ''; // [5]
+
+  option {
+    padding: 5px 10px;
+  }
+}
+
+select::-ms-expand {
+  display: none; // [6]
+}
+
+textarea {
+  line-height: map-get($line-height, 'base');
+  max-width: $form-element-width-large;
+  min-height: 200px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  resize: vertical;
+}

@@ -1,0 +1,89 @@
+//
+// Icon
+// ----
+//
+
+// import
+
+@font-face {
+  font-family: 'iconmoon';
+  src: url('../icons/icomoon.eot?xptlkq');
+  src: url('../icons/icomoon.eot?xptlkq#iefix') format('embedded-opentype'),
+    url('../icons/icomoon.ttf?xptlkq') format('truetype'),
+    url('../icons/icomoon.woff?xptlkq') format('woff'),
+    url('../icons/icomoon.svg?xptlkq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// map
+
+$icons: (
+  'home3': '\e902',
+  'camera': '\e90f',
+  'connection': '\e91b',
+  'phone': '\e942',
+  'location': '\e947',
+  'location2': '\e948',
+  'alarm': '\e950',
+  'calendar': '\e953',
+  'mobile2': '\e959',
+  'bubble': '\e96b',
+  'bubbles': '\e96c',
+  'user': '\e971',
+  'spinner2': '\e97b',
+  'spinner5': '\e97e',
+  'spinner6': '\e97f',
+  'earth': '\e9ca',
+  'link': '\e9cb',
+  'star-empty': '\e9d7',
+  'star-half': '\e9d8',
+  'star-full': '\e9d9',
+  'warning': '\ea07',
+  'info': '\ea0c',
+  'cross': '\ea0f',
+  'checkmark': '\ea10',
+  'arrow-right2': '\ea3c',
+  'arrow-left2': '\ea40',
+  'circle-right': '\ea42',
+  'circle-left': '\ea44',
+  'checkbox-checked': '\ea52',
+  'checkbox-unchecked': '\ea53',
+  'radio-checked': '\ea54',
+  'radio-checked2': '\ea55',
+  'share2': '\ea82',
+  'mail2': '\ea84',
+  'google-plus': '\ea8b',
+  'facebook': '\ea90',
+  'instagram': '\ea92',
+  'whatsapp': '\ea93',
+  'twitter': '\ea96',
+  'rss': '\ea9b',
+  'youtube': '\ea9d',
+  'github': '\eab0',
+  'linkedin2': '\eaca',
+  'pinterest2': '\ead2',
+);
+
+// mixin
+
+@mixin icon($position: before, $icon: false, $styles: true) {
+  @if $position == both {
+    $position: 'before, &:after';
+  }
+
+  &:#{$position} {
+    @if $icon {
+      content: '#{map-get($icons, $icon)}';
+    }
+
+    @if $styles {
+      font-family: 'iconmoon';
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+    }
+
+    @content;
+  }
+}

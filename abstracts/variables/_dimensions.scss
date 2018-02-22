@@ -1,0 +1,20 @@
+//
+// Dimensions
+// ----------
+//
+
+$inner-padding: 20px;
+
+$inner: (
+  'default-padding': $inner-padding,
+  'larger-padding': ($inner-padding * 2),
+  'max-width': 1040px,
+);
+
+$small-spacing: 2em;
+$large-spacing: 4em;
+
+$form-element-width-small: 320px;
+$form-element-width-large: 580px;
+
+$flex-grid-spacing: 20px;

@@ -1,0 +1,10 @@
+//
+// Remove list style
+// -----------------
+//
+
+@mixin remove-list-style() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,25 @@
+//
+// Typography
+// ----------
+//
+
+$body-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$font-sizes: (
+  'base-small': 14px,
+  'base-normal': 16px,
+  'huge': 2.4em,
+  'big': 2.2em,
+  'large': 1.8em,
+  'medium': 1.2em,
+  'normal': 1em,
+  'small': .8em,
+);
+
+$text-margin: 2rem;
+
+$line-height: (
+  'headings': 1.25em,
+  'default': 1.5em
+);

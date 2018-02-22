@@ -1,0 +1,40 @@
+//
+// Placeholder
+// -----------
+//
+
+@mixin placeholder() {
+  $placeholder: (
+    'default': $text-light-color,
+    'focus': $text-color,
+  );
+
+  // scss-lint:disable PseudoElement
+
+  ::-moz-input-placeholder {
+    color: map-get($placeholder, 'default');
+  }
+
+  ::-ms-input-placeholder {
+    color: map-get($placeholder, 'default');
+  }
+
+  ::-webkit-input-placeholder {
+    color: map-get($placeholder, 'default');
+  }
+
+  :focus::-moz-input-placeholder {
+    color: map-get($placeholder, 'focus');
+  }
+
+  :focus::-ms-input-placeholder {
+    color: map-get($placeholder, 'focus');
+  }
+
+  :focus::-webkit-input-placeholder {
+    color: map-get($placeholder, 'focus');
+  }
+
+  // scss-lint:enable PseudoElement
+
+}

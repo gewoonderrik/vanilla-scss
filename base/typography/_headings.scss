@@ -1,0 +1,43 @@
+//
+// Headings
+// --------
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-family: $heading-font;
+  line-height: map-get($line-height, 'headings');
+  margin: 0 0 $text-margin;
+
+  a {
+    color: $heading-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+h1 {
+  font-size: map-get($font-sizes, 'huge');
+}
+
+h2 {
+  font-size: map-get($font-sizes, 'big');
+}
+
+h3 {
+  font-size: map-get($font-sizes, 'large');
+}
+
+h4,
+h5,
+h6 {
+  font-size: map-get($font-sizes, 'medium');
+}

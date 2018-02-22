@@ -1,0 +1,14 @@
+//
+// Inner
+// -----
+//
+
+.inner {
+  margin: 0 auto $large-spacing;
+  max-width: map-get($inner, 'max-width');
+  padding: 0 map-get($inner, 'default-padding');
+
+  @include respond-to('tablet-landscape') {
+    padding: 0 map-get($inner, 'larger-padding');
+  }
+}

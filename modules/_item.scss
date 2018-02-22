@@ -1,0 +1,14 @@
+//
+// Item
+// ----
+//
+
+.item {
+  @include flex-grid-item();
+  background-color: $black;
+  min-height: 200px;
+
+  &-wrapper {
+    @include flex-grid-wrapper();
+  }
+}

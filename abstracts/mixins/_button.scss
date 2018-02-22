@@ -1,0 +1,23 @@
+//
+// Button
+// ------
+//
+
+@mixin button() {
+  background-color: $primary-color;
+  border: 0;
+  color: $white;
+  clear: both;
+  cursor: pointer;
+  display: inline-block;
+  font-size: map-get($font-sizes, 'normal');
+  margin-right: $text-margin;
+  margin-bottom: $text-margin;
+  padding: 1em 1.5em;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $white;
+  }
+}

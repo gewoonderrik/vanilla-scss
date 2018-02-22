@@ -1,0 +1,15 @@
+//
+// Z-index
+// -------
+//
+
+$z-index: (
+  'max': 2147483647,
+  'modal': 10000,
+  'large': 1000,
+  'medium': 100,
+  'normal': 10,
+  'tiny': 1,
+  'none': 0,
+  'hidden': -1,
+);
